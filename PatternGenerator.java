@@ -2,6 +2,9 @@ public class PatternGenerator {
     //  Class author:  Abdoul-Aziz Diagne
     //  Date created:  10/28/2026
     //  General description: this class holds various methods that generate various patterns using various loop types
+    
+    //  Pre-condition: rows must be type int
+    //  Post-condition: prints stars in a pattern where each row increases by 2, capping at rows limit starting from one
     public static void stars(int rows) {
         int iterations = 1;
         String star = "*";
@@ -12,7 +15,8 @@ public class PatternGenerator {
         iterations++;
         }
     }    
-
+    //  Pre-condition: rows must be type int
+    //  Post-condition: prints numbers in different rows, the number repeated based on its own value started from one
     public static void triange(int rows) {
         int iterations = 1;
         String numberToPrint = "";
@@ -28,6 +32,8 @@ public class PatternGenerator {
             iterations++;
         } while(iterations <= rows);
     }
+    //  Pre-condition: start must be type int and odd to show intended result
+    //  Post-condition: prints odd numbers, starting from 'start,' and only odd numbers
     public static void odds (int start) {
         for(int i = start; i>=0; i -= 2) {
             for(int b = i; b>=1; b--) {
@@ -36,6 +42,8 @@ public class PatternGenerator {
             System.out.print("\n");
         }
     }
+    //  Pre-condition: maxE must be type int
+    //  Post-condition: prints letter 'E' or 'O,' starting with E if maxE is odd and O if maxE is even, middle letter matching maxE being even or odd and being printed maxE times. 
     public static void eo(int maxE) {
         char letterToPrint;
         if(maxE % 2 == 0) {
@@ -72,6 +80,8 @@ public class PatternGenerator {
             }
     }
 }
+    //  Pre-condition: rows must be type int
+    //  Post-condition: prints numbers starting from one in an amount in which when the last row, which will have one repetition, is printed, it will be the value of rows
     public static void pyramid(int rows) {
         int row = rows;
         String space = "";
@@ -85,6 +95,8 @@ public class PatternGenerator {
             space += " ";
         }
     }
+    //  Pre-condition: program must be ran
+    //  Post-condition: various tests of the above methods, additionally can run literally anything else
     public static void main(String[] args) {
         stars(7);
         triange(9);
