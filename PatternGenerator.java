@@ -3,7 +3,7 @@ public class PatternGenerator {
     //  Date created:  10/28/2026
     //  General description: this class holds various methods that generate various patterns using various loop types
     
-    //  Pre-condition: rows must be type int
+    //  Pre-condition: rows must be positive
     //  Post-condition: prints stars in a pattern where each row increases by 2, capping at rows limit starting from one
     public static void stars(int rows) {
         int iterations = 1;
@@ -15,7 +15,7 @@ public class PatternGenerator {
         iterations++;
         }
     }    
-    //  Pre-condition: rows must be type int
+    //  Pre-condition: rows must be positive
     //  Post-condition: prints numbers in different rows, the number repeated based on its own value started from one
     public static void triange(int rows) {
         int iterations = 1;
@@ -32,7 +32,7 @@ public class PatternGenerator {
             iterations++;
         } while(iterations <= rows);
     }
-    //  Pre-condition: start must be type int and odd to show intended result
+    //  Pre-condition: start must be odd to show intended result
     //  Post-condition: prints odd numbers, starting from 'start,' and only odd numbers
     public static void odds (int start) {
         for(int i = start; i>=0; i -= 2) {
@@ -42,7 +42,7 @@ public class PatternGenerator {
             System.out.print("\n");
         }
     }
-    //  Pre-condition: maxE must be type int
+    //  Pre-condition: maxE must be positive
     //  Post-condition: prints letter 'E' or 'O,' starting with E if maxE is odd and O if maxE is even, middle letter matching maxE being even or odd and being printed maxE times. 
     public static void eo(int maxE) {
         char letterToPrint;
@@ -80,7 +80,7 @@ public class PatternGenerator {
             }
     }
 }
-    //  Pre-condition: rows must be type int
+    //  Pre-condition: rows must not be negative
     //  Post-condition: prints numbers starting from one in an amount in which when the last row, which will have one repetition, is printed, it will be the value of rows
     public static void pyramid(int rows) {
         int row = rows;
