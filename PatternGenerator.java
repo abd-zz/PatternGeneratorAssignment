@@ -8,7 +8,7 @@ public class PatternGenerator {
     public static void stars(int rows) {
         int iterations = 1;
         String star = "*";
-        while(iterations < rows) {
+        while(iterations <= rows) {
         
         System.out.println(star);
         star += "*" + "*";
